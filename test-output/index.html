@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Cone\AppData\Local\Temp\testng-eclipse--1238770218\testng-customsuite.xml</span>
+                    <span>C:\Users\Cone\AppData\Local\Temp\testng-eclipse--648695059\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.TestCreateAnAlert" hash-for-method="test_Create_Alert">test_Create_Alert</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.TestCreateAnArchiveNotCapture" hash-for-method="test_Create_Archive_No_Capture">test_Create_Archive_No_Capture</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,20 +120,22 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test.TestCreateAnAlert</span>
+              <span class="class-name">test.TestCreateAnArchiveNotCapture</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_Create_Alert">
-                  </a> <!-- test_Create_Alert -->
-                  <span class="method-name">test_Create_Alert</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;li&gt; is not reachable by keyboard
+                  <a name="test_Create_Archive_No_Capture">
+                  </a> <!-- test_Create_Archive_No_Capture -->
+                  <span class="method-name">test_Create_Archive_No_Capture</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: select.ng-touched
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DIEGO&apos;, ip: &apos;192.168.86.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+System info: host: &apos;DIEGO&apos;, ip: &apos;192.168.26.27&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 18812, moz:profile: C:\Users\Cone\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 8f410d38-d576-471f-a635-712a34cf17d4
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 8960, moz:profile: C:\Users\Cone\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c2512b7d-59a8-4a4a-a2a9-d9b4568978a4
+*** Element info: {Using=css selector, value=select.ng-touched}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -144,17 +146,15 @@ Session ID: 8f410d38-d576-471f-a635-712a34cf17d4
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
-	at pageFactory.SocialMediaAlertCreation.writeEmail(SocialMediaAlertCreation.java:122)
-	at pageFactory.SocialMediaAlertCreation.createANetworkAlert(SocialMediaAlertCreation.java:111)
-	at test.TestCreateAnAlert.test_Create_Alert(TestCreateAnAlert.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:411)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at pageFactory.SocialMediaCreateArchiveFrom.selectGroup(SocialMediaCreateArchiveFrom.java:75)
+	at test.TestCreateAnArchiveNotCapture.test_Create_Archive_No_Capture(TestCreateAnArchiveNotCapture.java:62)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -189,7 +189,7 @@ Session ID: 8f410d38-d576-471f-a635-712a34cf17d4
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Cone\AppData\Local\Temp\testng-eclipse--1238770218\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Cone\AppData\Local\Temp\testng-eclipse--648695059\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -198,7 +198,7 @@ Session ID: 8f410d38-d576-471f-a635-712a34cf17d4
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.TestCreateAnAlert&quot;/&gt;
+      &lt;class name=&quot;test.TestCreateAnArchiveNotCapture&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -240,14 +240,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_Create_Alert')
-data.setCell(0, 2, 'test.TestCreateAnAlert')
-data.setCell(0, 3, 20835);
+data.setCell(0, 1, 'test_Create_Archive_No_Capture')
+data.setCell(0, 2, 'test.TestCreateAnArchiveNotCapture')
+data.setCell(0, 3, 62077);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -273,7 +273,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.TestCreateAnAlert</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.TestCreateAnArchiveNotCapture</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
@@ -281,8 +281,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">test_Create_Alert</span>
-                <span class="method-start">14712 ms</span>
+                <span class="method-name">test_Create_Archive_No_Capture</span>
+                <span class="method-start">30482 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -36,17 +36,23 @@ public class SocialMediaAlertDashboard {
     
     //Create Twitter Archive
     public void clickCreateArchiveTwitter () {
-    	
+    	pause();
+    	createArchive.click();
+    	createArchiveTwitterOption.click();
     }
     
     //Search an archive @parameter 
     public void searchArchive (String archive) {
-    	
+    	pause();
+    	createArchiveSearchButton.click();
+    	pause();
+    	createArchiveSearchField.sendKeys(archive);
     }
     
     //Get label data collection searched row
     public void getArchiveDataCollectionStatus () {
-    	
+    	pause();
+    	createArchiveDataCollectionLabel.getText();
     }
     
     public SocialMediaAlertDashboard(WebDriver driver){

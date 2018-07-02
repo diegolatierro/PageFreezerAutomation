@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageFactory.SocialMediaAlertDashboard;
+import pageFactory.SocialMediaCreateArchiveFrom;
 import pageFactory.SocialMediaLogin;
 
 public class TestCreateAnArchiveNotCapture {
@@ -14,6 +15,7 @@ public class TestCreateAnArchiveNotCapture {
     WebDriver driver;
     SocialMediaLogin objLogin;
     SocialMediaAlertDashboard objAlertDashboardPage;
+    SocialMediaCreateArchiveFrom objCreateArchiveFrom;
 
     @BeforeTest
     public void setup(){
@@ -43,16 +45,31 @@ public class TestCreateAnArchiveNotCapture {
     @Test(priority=0)
     public void test_Create_Archive_No_Capture(){
     
-    //Create Login Page object
-    objLogin = new SocialMediaLogin(driver);
-    //login to application
-    objLogin.loginToSocialMedia("diegolatierro@gmail.com", "Cohiba3672!");
-    objAlertDashboardPage = new SocialMediaAlertDashboard(driver);
-    
-    
-    //create a chatter post
-    //objAlertCreationPage.createANetworkAlert(name, network, email);
-    //verify if text is present
-    //Assert.assertTrue(objAlertPage.verifyTextPresent(message));
+    	String URL = "";
+    	String email = "";
+		//Create Login Page object
+		objLogin = new SocialMediaLogin(driver);
+		//login to application
+		objLogin.loginToSocialMedia("diegolatierro@gmail.com", "Cohiba3672!");
+		objAlertDashboardPage = new SocialMediaAlertDashboard(driver);
+		objCreateArchiveFrom  = new SocialMediaCreateArchiveFrom(driver);
+		
+		objAlertDashboardPage.clickCreateArchiveTwitter();
+		objCreateArchiveFrom.writeURL(URL);
+		//do not check the checkbox
+		objCreateArchiveFrom.writeEmail(email);
+		objCreateArchiveFrom.clickOnNext();
+		objCreateArchiveFrom.selectGroup();
+		objCreateArchiveFrom.selectRole();
+		objCreateArchiveFrom.clickOnCreate();
+		//resend email
+		
+		//Email section
+		
+		//verify if text is present
+		//Assert.assertTrue(objAlertPage.verifyTextPresent(message));
+		
+		//add a final module to delete
+		
     }
 }
