@@ -18,7 +18,37 @@ public class SocialMediaAlertDashboard {
     @FindBy(css="button[href='/alerts/new/settings']")
     WebElement createNewAlertButton;
 
+    @FindBy(css=".btn-group > button:nth-child(1)")
+    WebElement createArchive;
 
+    @FindBy(css="a[href='/dashboard/archive?sm_type=TW']")
+    WebElement createArchiveTwitterOption;
+     
+    @FindBy(css="button[title='filter name']")
+    WebElement createArchiveSearchButton;
+    
+    @FindBy(css="input[placeholder='Filter Name']")
+    WebElement createArchiveSearchField;
+    
+    @FindBy(css="td[class='sm_auth']")
+    WebElement createArchiveDataCollectionLabel;
+    
+    
+    //Create Twitter Archive
+    public void clickCreateArchiveTwitter () {
+    	
+    }
+    
+    //Search an archive @parameter 
+    public void searchArchive (String archive) {
+    	
+    }
+    
+    //Get label data collection searched row
+    public void getArchiveDataCollectionStatus () {
+    	
+    }
+    
     public SocialMediaAlertDashboard(WebDriver driver){
         this.driver = driver;
         //This initElements method will create all WebElements
