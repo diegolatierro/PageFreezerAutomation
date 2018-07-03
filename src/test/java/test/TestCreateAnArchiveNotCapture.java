@@ -77,14 +77,15 @@ public class TestCreateAnArchiveNotCapture {
 	*/
 		//Email section
 		//go to gmail and open the email
-		// step  10 Check and click the email to connect the account
-		driver.get("https://mail.google.com/mail/u/0/#inbox");
+		// step  10 Check and click the email to connect the account (BASIC HTML)
+		driver.get("https://mail.google.com/mail/u/0/h/1isycmedm1c6q/?&");
 		objGmail.loginGmail(email, gmailPass);
 		//step 11 Click on connect button from the email
-		objGmail.checkFirstEmailAndClickConnect();//NOT CLICKING NOW!!! FIX THIS
+		objGmail.checkFirstEmailAndClickConnect();
 		
 		//step 12. Click on Authorize
-		//objGmail.clickAuthorizeApp();
+		objGmail.clickAuthorizeApp();
+		//it will ask for user and pass from twitter!!!!
 		//step 13. Search for the archive recently created
 		
 		//step 14. Verify Data collection on Social Media Dashboard"

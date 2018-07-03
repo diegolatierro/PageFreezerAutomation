@@ -25,14 +25,17 @@ public class Gmail {
     @FindBy(css="#passwordNext")
     WebElement loginPassNextButton;
     
-    @FindBy(css="colgroup+tbody>tr:first-child")
+    @FindBy(css="table+table>tbody>tr>td>a[href='?&th=1646047d9f0ad8e9&v=c']>span")
     WebElement firstEmail;
     
     @FindBy(css="#allow")
     WebElement authorizeAppButton;
     
-    @FindBy(css=".m_5105465818631813422mcnButton")
+    @FindBy(css="a[title='  Login to PageFreezer  ']")
     WebElement connectToPageFreezerEmailButton;
+    
+    @FindBy(css=".msg > div:nth-child(2) > center:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > p:nth-child(6) > a:nth-child(2)")
+    WebElement connectToPageFreezerLink;
     
     public Gmail(WebDriver driver){
         this.driver = driver;
@@ -61,14 +64,23 @@ public class Gmail {
     
     //click on the first email
     public void clickFirstEmail() {
+    	this.pause();
     	firstEmail.click();
     }
     
+    //get the connect to page freezer link
+    public String getConnectPageFreezerLink() {
+    	return connectToPageFreezerLink.getText();
+    }
+    
+    //modify this method to copy the url and redirect to avoid multiple tabs
     public void clickConnectToPageFreezer() {
-    	connectToPageFreezerEmailButton.click();
+    	//connectToPageFreezerEmailButton.click();
+    	driver.get(getConnectPageFreezerLink());
     }
     
     public void clickAuthorizeApp() {
+    	this.pause();
     	authorizeAppButton.click();
     }
     
