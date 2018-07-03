@@ -2,36 +2,32 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="92585" started-at="2018-07-02T19:59:59Z" finished-at="2018-07-02T20:01:31Z">
+  <suite name="Default suite" duration-ms="34371" started-at="2018-07-03T15:27:30Z" finished-at="2018-07-03T15:28:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="92585" started-at="2018-07-02T19:59:59Z" finished-at="2018-07-02T20:01:31Z">
+    <test name="Default test" duration-ms="34371" started-at="2018-07-03T15:27:30Z" finished-at="2018-07-03T15:28:04Z">
       <class name="test.TestCreateAnArchiveNotCapture">
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="setup" is-config="true" duration-ms="30397" started-at="2018-07-02T19:59:59Z" finished-at="2018-07-02T20:00:29Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="setup" is-config="true" duration-ms="14561" started-at="2018-07-03T15:27:30Z" finished-at="2018-07-03T15:27:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="test_Create_Archive_No_Capture" duration-ms="62077" started-at="2018-07-02T20:00:29Z" finished-at="2018-07-02T20:01:31Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="test_Create_Archive_No_Capture" duration-ms="19575" started-at="2018-07-03T15:27:45Z" finished-at="2018-07-03T15:28:04Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[Unable to locate element: select.ng-touched
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Element <tr id=":3a" class="zA yO"> could not be scrolled into view
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'DIEGO', ip: '192.168.26.27', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 8960, moz:profile: C:\Users\Cone\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: c2512b7d-59a8-4a4a-a2a9-d9b4568978a4
-*** Element info: {Using=css selector, value=select.ng-touched}]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 3368, moz:profile: C:\Users\Cone\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c9fd4017-b785-4d60-b217-ae52f0b4500d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: select.ng-touched
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <tr id=":3a" class="zA yO"> could not be scrolled into view
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'DIEGO', ip: '192.168.26.27', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 8960, moz:profile: C:\Users\Cone\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: c2512b7d-59a8-4a4a-a2a9-d9b4568978a4
-*** Element info: {Using=css selector, value=select.ng-touched}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 3368, moz:profile: C:\Users\Cone\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c9fd4017-b785-4d60-b217-ae52f0b4500d
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -42,15 +38,17 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:411)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at com.sun.proxy.$Proxy8.click(Unknown Source)
-at pageFactory.SocialMediaCreateArchiveFrom.selectGroup(SocialMediaCreateArchiveFrom.java:75)
-at test.TestCreateAnArchiveNotCapture.test_Create_Archive_No_Capture(TestCreateAnArchiveNotCapture.java:62)
+at pageFactory.Gmail.clickFirstEmail(Gmail.java:64)
+at pageFactory.Gmail.checkFirstEmailAndClickConnect(Gmail.java:96)
+at test.TestCreateAnArchiveNotCapture.test_Create_Archive_No_Capture(TestCreateAnArchiveNotCapture.java:84)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -78,7 +76,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Create_Archive_No_Capture -->

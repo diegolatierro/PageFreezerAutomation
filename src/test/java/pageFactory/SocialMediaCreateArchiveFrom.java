@@ -13,7 +13,7 @@ public class SocialMediaCreateArchiveFrom {
 
     WebDriver driver;
     
-    @FindBy(css=".ng-touched")
+    @FindBy(css="input[vurl='']")
     WebElement createArchiveURLField;
     
     @FindBy(css="div.archive-form-control:nth-child(2) > div:nth-child(3) > label:nth-child(1) > input")
@@ -25,7 +25,7 @@ public class SocialMediaCreateArchiveFrom {
     @FindBy(css="button.btn:nth-child(4)")
     WebElement createArchiveNextButton;
     
-    @FindBy(css="select.ng-touched")
+    @FindBy(css="select[aria-label='select group']")
     WebElement createArchiveGroupPicklist;
     
     @FindBy(css="select.ng-touched > option:nth-child(2)")
