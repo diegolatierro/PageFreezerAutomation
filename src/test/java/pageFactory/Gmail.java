@@ -37,11 +37,28 @@ public class Gmail {
     @FindBy(css=".msg > div:nth-child(2) > center:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > p:nth-child(6) > a:nth-child(2)")
     WebElement connectToPageFreezerLink;
     
+    @FindBy(css="#username_or_email")
+    WebElement twitterEmailUserField;
+
+    @FindBy(css="#password")
+    WebElement twitterEmailPassField;
+    
     public Gmail(WebDriver driver){
         this.driver = driver;
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
     }
+    
+    //Set user name in textbox twitter email name
+    public void setUserNameTwitterEmail(String strUserName){
+    	twitterEmailUserField.sendKeys(strUserName);      
+    } 
+    
+    //Set pass in textbox twitter email pass
+    public void setUserPassTwitterEmail(String strUserName){
+    	twitterEmailPassField.sendKeys(strUserName);      
+    } 
+    
     //Set user name in textbox
     public void setUserName(String strUserName){
     	loginFieldUserName.sendKeys(strUserName);      
@@ -117,4 +134,8 @@ public class Gmail {
   			e.printStackTrace();
   		}
   	}
+	public void completeTwDataOnEmail(String twitterUser, String twitterPass) {
+    	this.setUserNameTwitterEmail(twitterUser);
+    	this.setUserPassTwitterEmail(twitterPass);
+	}
 }

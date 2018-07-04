@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47700" started-at="2018-07-03T17:25:37Z" finished-at="2018-07-03T17:26:24Z">
+  <suite name="Default suite" duration-ms="104124" started-at="2018-07-04T14:22:28Z" finished-at="2018-07-04T14:24:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47700" started-at="2018-07-03T17:25:37Z" finished-at="2018-07-03T17:26:24Z">
+    <test name="Default test" duration-ms="104124" started-at="2018-07-04T14:22:28Z" finished-at="2018-07-04T14:24:12Z">
       <class name="test.TestCreateAnArchiveNotCapture">
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="setup" is-config="true" duration-ms="11028" started-at="2018-07-03T17:25:37Z" finished-at="2018-07-03T17:25:48Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="setup" is-config="true" duration-ms="16701" started-at="2018-07-04T14:22:28Z" finished-at="2018-07-04T14:22:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="test_Create_Archive_No_Capture" duration-ms="36638" started-at="2018-07-03T17:25:48Z" finished-at="2018-07-03T17:26:24Z">
+        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateAnArchiveNotCapture@3ffc5af1]" name="test_Create_Archive_No_Capture" duration-ms="87390" started-at="2018-07-04T14:22:45Z" finished-at="2018-07-04T14:24:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Create_Archive_No_Capture -->

@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pageFactory.SocialMediaAlertDashboard;
+import pageFactory.SocialMediaDashboard;
 import pageFactory.SocialMediaAlertCreation;
 import pageFactory.SocialMediaLogin;
 
@@ -14,7 +14,7 @@ public class TestCreateAnAlert {
 
     WebDriver driver;
     SocialMediaLogin objLogin;
-    SocialMediaAlertDashboard objAlertDashboardPage;
+    SocialMediaDashboard objAlertDashboardPage;
     SocialMediaAlertCreation objAlertCreationPage;
 
     @BeforeTest
@@ -42,7 +42,7 @@ public class TestCreateAnAlert {
     objLogin = new SocialMediaLogin(driver);
     //login to application
     objLogin.loginToSocialMedia("diegolatierro@gmail.com", "Cohiba3672!");
-    objAlertDashboardPage = new SocialMediaAlertDashboard(driver);
+    objAlertDashboardPage = new SocialMediaDashboard(driver);
     objAlertCreationPage = new SocialMediaAlertCreation(driver);
     //go to alert creation
     objAlertDashboardPage.goToAlertCreation();

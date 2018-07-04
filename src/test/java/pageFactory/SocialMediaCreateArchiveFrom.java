@@ -28,7 +28,7 @@ public class SocialMediaCreateArchiveFrom {
     @FindBy(css="select[aria-label='select group']")
     WebElement createArchiveGroupPicklist;
     
-    @FindBy(css="select.ng-touched > option:nth-child(2)")
+    @FindBy(css="select[aria-label='select group']>option[value='__TESTGROUP']")
     WebElement createArchiveGroupPicklistTestGroup;
     
     @FindBy(css="select[ng-model='access_item.role']")
@@ -85,6 +85,7 @@ public class SocialMediaCreateArchiveFrom {
     //click on Create
     public void clickOnCreate() {
     	createArchiveCreateButton.click();
+    	this.pause();
     }
     
 	//NOT WRITE BUT THE ONLY WORKAROUND THAT I FOUND

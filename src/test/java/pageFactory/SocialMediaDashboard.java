@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SocialMediaAlertDashboard {
+public class SocialMediaDashboard {
 
     /**
      * All WebElements are identified by @FindBy annotation
@@ -33,6 +33,23 @@ public class SocialMediaAlertDashboard {
     @FindBy(css="td[class='sm_auth']")
     WebElement createArchiveDataCollectionLabel;
     
+    @FindBy(css="#ngdialog1-aria-describedby")
+    WebElement successModal;
+    
+    @FindBy(css=".mddialog-close")
+    WebElement closeModal;
+    
+    @FindBy(css="i[tooltip-text='Edit']")
+    WebElement editArchive;
+    
+    @FindBy(css=".delete-link")
+    WebElement deleteArchiveLink;
+    
+    @FindBy(css="input.ng-empty:nth-child(2)")
+    WebElement deleteArchiveField;
+    
+    @FindBy(css=".btn-danger")
+    WebElement deleteArchiveButton;
     
     //Create Twitter Archive
     public void clickCreateArchiveTwitter () {
@@ -50,12 +67,12 @@ public class SocialMediaAlertDashboard {
     }
     
     //Get label data collection searched row
-    public void getArchiveDataCollectionStatus () {
+    public String getArchiveDataCollectionStatus () {
     	pause();
-    	createArchiveDataCollectionLabel.getText();
+    	return createArchiveDataCollectionLabel.getText();
     }
     
-    public SocialMediaAlertDashboard(WebDriver driver){
+    public SocialMediaDashboard(WebDriver driver){
         this.driver = driver;
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
@@ -76,6 +93,32 @@ public class SocialMediaAlertDashboard {
 	public void goToAlertCreation() {
 		this.clickAlertHeaderButton();
 		this.clickNewAlertButton();
+	}
+	
+	public String getSuccessModalAlert() {
+		return successModal.getText();
+	}
+	
+	public void clickOnEditArchive() {
+		editArchive.click();
+	}
+	public void clickOnDeleteArchive() {
+		deleteArchiveLink.click();
+	}
+	public void typeDeleteOnField() {
+		deleteArchiveField.sendKeys("delete");
+	}
+	public void clickOnDeleteModal() {
+		deleteArchiveButton.click();
+	}
+	
+	public void deleteArchive() {
+		this.clickOnEditArchive();
+		this.pause();
+		this.clickOnDeleteArchive();
+		this.typeDeleteOnField();
+		this.clickOnDeleteModal();
+		this.pause();
 	}
 	
 	

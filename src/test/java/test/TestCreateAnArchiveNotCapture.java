@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pageFactory.SocialMediaAlertDashboard;
+import pageFactory.SocialMediaDashboard;
 import pageFactory.SocialMediaCreateArchiveFrom;
 import pageFactory.SocialMediaLogin;
 import pageFactory.Gmail;
@@ -15,7 +15,7 @@ public class TestCreateAnArchiveNotCapture {
 
     WebDriver driver;
     SocialMediaLogin objLogin;
-    SocialMediaAlertDashboard objAlertDashboardPage;
+    SocialMediaDashboard objDashboardPage;
     SocialMediaCreateArchiveFrom objCreateArchiveFrom;
     Gmail objGmail;
 
@@ -35,7 +35,6 @@ public class TestCreateAnArchiveNotCapture {
 		6. Select __TESTGROUP on the group
 		7. Select Manager on Archive Role
 		8. Click on Save
-		9. Click on Resend the email
 		10. Check and click the email to connect the account
 		11. Click on connect button from the email
 		12. Click on Authorize
@@ -49,17 +48,19 @@ public class TestCreateAnArchiveNotCapture {
     
     	String URL = "https://twitter.com/DiegoTest3";
     	String email = "diegopagefreezer@gmail.com";
-    	//String gmailUser = "";
+    	String twitterUser = "@DiegoTest3";
+    	String twitterPass = "latierro050985";
     	String gmailPass = "latierro050985";
+    	String archive = "DiegoTest";
     	objGmail = new Gmail(driver);
-	/*	//Create Login Page object
+		//Create Login Page object
 		objLogin = new SocialMediaLogin(driver);
 		//login to application
 		objLogin.loginToSocialMedia("diegolatierro@gmail.com", "Cohiba3672!");
-		objAlertDashboardPage = new SocialMediaAlertDashboard(driver);
+		objDashboardPage = new SocialMediaDashboard(driver);
 		objCreateArchiveFrom  = new SocialMediaCreateArchiveFrom(driver);
 		// step 1 and 2 Click on Create Archive and Select Twitter
-		objAlertDashboardPage.clickCreateArchiveTwitter();
+		objDashboardPage.clickCreateArchiveTwitter();
 		// step 3 Write a twitter account
 		objCreateArchiveFrom.writeURL(URL);
 		//do not check the checkbox
@@ -73,8 +74,7 @@ public class TestCreateAnArchiveNotCapture {
 		objCreateArchiveFrom.selectRole();
 		// step 8 Click on Save
 		objCreateArchiveFrom.clickOnCreate();
-		// step 9 Click on Resend the email CAN BE SKIPPED
-	*/
+	
 		//Email section
 		//go to gmail and open the email
 		// step  10 Check and click the email to connect the account (BASIC HTML)
@@ -84,17 +84,22 @@ public class TestCreateAnArchiveNotCapture {
 		objGmail.checkFirstEmailAndClickConnect();
 		
 		//step 12. Click on Authorize
+		//it will ask for user and pass from twitter
+		objGmail.completeTwDataOnEmail(twitterUser, twitterPass);
 		objGmail.clickAuthorizeApp();
-		//it will ask for user and pass from twitter!!!!
+		
+		//assert success lightbox and close it
+		Assert.assertTrue(objDashboardPage.getSuccessModalAlert().equals("You have been successfully authenticated"));
+		//I should close the modal but since html is complicated is easier to reload the page
+		driver.get("https://sm2.pagefreezer.com/dashboard");
+		
 		//step 13. Search for the archive recently created
-		
+		objDashboardPage.searchArchive(archive);
 		//step 14. Verify Data collection on Social Media Dashboard"
-		
-		
-		//verify if text is present
-		//Assert.assertTrue(objAlertPage.verifyTextPresent(message));
+		Assert.assertTrue(objDashboardPage.getArchiveDataCollectionStatus().equals("Public, Private"));
 		
 		//add a final module to delete
-		
+		//after the validation the test must destroy the objects
+		objDashboardPage.deleteArchive();
     }
 }
