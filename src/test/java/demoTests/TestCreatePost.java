@@ -1,4 +1,4 @@
-package test;
+package demoTests;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pageFactory.SalesForceLogin;
 import pageFactory.SalesforceChatter;
 
-public class TestCreateQuestion {
+public class TestCreatePost {
 
     WebDriver driver;
     SalesForceLogin objLogin;
@@ -31,15 +31,14 @@ public class TestCreateQuestion {
 
     @Test(priority=0)
     public void test_Create_Chatter_Post(){
-    String message = "automated question message from DiegoBot4";
-    String description = "description for automated question";
+    String message = "automated message from DiegoBot5";
     //Create Login Page object
     objLogin = new SalesForceLogin(driver);
     //login to application
     objLogin.loginToSalesforce("diegolatierro@pf.com", "latierro050985");
     objChatterPage = new SalesforceChatter(driver);
     //create a chatter post
-    objChatterPage.createChatterQuestion(message, description);
+    objChatterPage.createChatterPost(message);
     //verify if text is present
     Assert.assertTrue(objChatterPage.verifyTextPresent(message));
     }

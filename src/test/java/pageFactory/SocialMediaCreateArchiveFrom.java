@@ -40,6 +40,11 @@ public class SocialMediaCreateArchiveFrom {
     @FindBy(css="button[class='btn btn-success']")
     WebElement createArchiveCreateButton;
     
+    @FindBy(css="div[class='ng-binding ng-scope']")
+    WebElement noUrlErrorMessage;
+    
+    @FindBy(css="div[class='ng-binding ng-scope']")
+    WebElement noEmailErrorMessage;
     
     public SocialMediaCreateArchiveFrom(WebDriver driver){
         this.driver = driver;
@@ -86,6 +91,16 @@ public class SocialMediaCreateArchiveFrom {
     public void clickOnCreate() {
     	createArchiveCreateButton.click();
     	this.pause();
+    }
+    
+    //get url error message
+    public String getURLErrorMessage() {
+    	return noUrlErrorMessage.getText();
+    }
+    
+    //get email error message
+    public String getEmailErrorMessage() {
+    	return noEmailErrorMessage.getText();
     }
     
 	//NOT WRITE BUT THE ONLY WORKAROUND THAT I FOUND

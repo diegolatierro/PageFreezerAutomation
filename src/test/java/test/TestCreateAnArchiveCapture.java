@@ -11,7 +11,7 @@ import pageFactory.SocialMediaCreateArchiveFrom;
 import pageFactory.SocialMediaLogin;
 import pageFactory.Gmail;
 
-public class TestCreateAnArchiveNotCapture {
+public class TestCreateAnArchiveCapture {
 
     WebDriver driver;
     SocialMediaLogin objLogin;
@@ -30,11 +30,12 @@ public class TestCreateAnArchiveNotCapture {
      * "1. Click on Create Archive
 		2. Select Twitter
 		3. Write a twitter account
-		4. Write an admin email
-		5. Click on Next
-		6. Select __TESTGROUP on the group
-		7. Select Manager on Archive Role
-		8. Click on Save
+		4. check the get messages checkbox
+		5. Write an admin email
+		6. Click on Next
+		7. Select __TESTGROUP on the group
+		8. Select Manager on Archive Role
+		9. Click on Save
 		10. Check and click the email to connect the account
 		11. Click on connect button from the email
 		12. Click on Authorize
@@ -63,7 +64,8 @@ public class TestCreateAnArchiveNotCapture {
 		objDashboardPage.clickCreateArchiveTwitter();
 		// step 3 Write a twitter account
 		objCreateArchiveFrom.writeURL(URL);
-		//do not check the checkbox
+		//CHECK THE CHECKBOX
+		objCreateArchiveFrom.checkGetMessages();
 		// step 4 Write an admin email
 		objCreateArchiveFrom.writeEmail(email);
 		// step 5 Click on Next
@@ -75,9 +77,6 @@ public class TestCreateAnArchiveNotCapture {
 		// step 8 Click on Save
 		objCreateArchiveFrom.clickOnCreate();
 	
-		//ASSERT THE ARCHIVE CORRECTLY CREATED
-		
-		
 		//Email section
 		//go to gmail and open the email
 		// step  10 Check and click the email to connect the account (BASIC HTML)
