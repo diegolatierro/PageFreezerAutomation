@@ -37,7 +37,7 @@ public class TestCreateArchiveValidateNoUrlError {
      */
 
     @Test(priority=0)
-    public void test_Create_Archive_No_Capture(){
+    public void test_Create_Archive_Validate_No_Url(){
     
     	String URL = "";
     	String email = "diegopagefreezer@gmail.com";

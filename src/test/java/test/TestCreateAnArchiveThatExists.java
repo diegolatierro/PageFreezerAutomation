@@ -11,7 +11,7 @@ import pageFactory.SocialMediaCreateArchiveFrom;
 import pageFactory.SocialMediaLogin;
 import pageFactory.Gmail;
 
-public class TestCreateAnArchiveCapture {
+public class TestCreateAnArchiveThatExists {
 
     WebDriver driver;
     SocialMediaLogin objLogin;
@@ -30,7 +30,7 @@ public class TestCreateAnArchiveCapture {
      * "1. Click on Create Archive
 		2. Select Twitter
 		3. Write a twitter account
-		4. check the get messages checkbox
+		4. Check the get messages option
 		5. Write an admin email
 		6. Click on Next
 		7. Select __TESTGROUP on the group
@@ -40,12 +40,19 @@ public class TestCreateAnArchiveCapture {
 		11. Click on connect button from the email
 		12. Click on Authorize
 		13. Search for the archive recently created
-		14. Verify Data collection on Social Media Dashboard"
+		14. Verify Data collection on Social Media Dashboard
+		15. Click on create archive
+		16. Write the same twitter account
+		17. Write the same admin email
+		18. Click on Next
+		19.Select __TESTGROUP on the group
+		20. Select Manager on Archive Role
+		21. Click on Save"
      * 		
      */
 
     @Test(priority=0)
-    public void test_Create_Archive_Capture(){
+    public void test_Create_Archive_That_Exists(){
     
     	String URL = "https://twitter.com/DiegoTest3";
     	String email = "diegopagefreezer@gmail.com";
@@ -60,6 +67,12 @@ public class TestCreateAnArchiveCapture {
 		objLogin.loginToSocialMedia("diegolatierro@gmail.com", "Cohiba3672!");
 		objDashboardPage = new SocialMediaDashboard(driver);
 		objCreateArchiveFrom  = new SocialMediaCreateArchiveFrom(driver);
+		
+		
+		//PRECONDITIONS
+		//objDashboardPage.deleteArchive();
+		
+		
 		// step 1 and 2 Click on Create Archive and Select Twitter
 		objDashboardPage.clickCreateArchiveTwitter();
 		// step 3 Write a twitter account
@@ -99,6 +112,24 @@ public class TestCreateAnArchiveCapture {
 		objDashboardPage.searchArchive(archive);
 		//step 14. Verify Data collection on Social Media Dashboard"
 		Assert.assertTrue(objDashboardPage.getArchiveDataCollectionStatus().equals("Public, Private"));
+		
+		//15. Click on create archive
+		objDashboardPage.clickCreateArchiveTwitter();
+		//16. Write the same twitter account
+		objCreateArchiveFrom.writeURL(URL);
+		//17. Write the same admin email
+		objCreateArchiveFrom.writeEmail(email);
+		//18. Click on Next
+		objCreateArchiveFrom.clickOnNext();		
+		//step 19 Select __TESTGROUP on the group
+		objCreateArchiveFrom.selectGroup();
+		// step 20 Select Manager on Archive Role
+		objCreateArchiveFrom.selectRole();
+		// step 21 Click on Save
+		objCreateArchiveFrom.clickOnCreate();
+		
+		//validate the error message
+		Assert.assertTrue(objDashboardPage.getDuplicatedArchiveErrorMessage().equals(""));
 		
 		//add a final module to delete
 		//after the validation the test must destroy the objects

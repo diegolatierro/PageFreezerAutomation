@@ -11,7 +11,7 @@ import pageFactory.SocialMediaCreateArchiveFrom;
 import pageFactory.SocialMediaLogin;
 import pageFactory.Gmail;
 
-public class TestCreateAnArchiveCapture {
+public class TestCreateAnArchiveDelete {
 
     WebDriver driver;
     SocialMediaLogin objLogin;
@@ -30,22 +30,20 @@ public class TestCreateAnArchiveCapture {
      * "1. Click on Create Archive
 		2. Select Twitter
 		3. Write a twitter account
-		4. check the get messages checkbox
+		4. Check the get messages option
 		5. Write an admin email
 		6. Click on Next
 		7. Select __TESTGROUP on the group
 		8. Select Manager on Archive Role
 		9. Click on Save
-		10. Check and click the email to connect the account
-		11. Click on connect button from the email
-		12. Click on Authorize
-		13. Search for the archive recently created
-		14. Verify Data collection on Social Media Dashboard"
+		10. Click on delete link
+		11. Type delete on the field
+		12. Click on Delete button"
      * 		
      */
 
     @Test(priority=0)
-    public void test_Create_Archive_Capture(){
+    public void test_Create_Archive_Delete(){
     
     	String URL = "https://twitter.com/DiegoTest3";
     	String email = "diegopagefreezer@gmail.com";

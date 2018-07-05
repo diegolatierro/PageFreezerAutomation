@@ -47,9 +47,12 @@ public class SocialMediaDashboard {
     
     @FindBy(css="input.ng-empty:nth-child(2)")
     WebElement deleteArchiveField;
-    
+        
     @FindBy(css=".btn-danger")
     WebElement deleteArchiveButton;
+    
+    @FindBy(css="")
+    WebElement createDuplicatedErrorLabel;
     
     //Create Twitter Archive
     public void clickCreateArchiveTwitter () {
@@ -131,4 +134,9 @@ public class SocialMediaDashboard {
 			e.printStackTrace();
 		}
 	}
+
+	public Object getDuplicatedArchiveErrorMessage() {
+		return createDuplicatedErrorLabel.getText();
+	}
+
 }

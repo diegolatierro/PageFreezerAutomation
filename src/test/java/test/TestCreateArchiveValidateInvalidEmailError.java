@@ -36,7 +36,7 @@ public class TestCreateArchiveValidateInvalidEmailError {
      */
 
     @Test(priority=0)
-    public void test_Create_Archive_No_Capture(){
+    public void test_Create_Archive_Validate_Invalid_Email(){
     
     	String URL = "https://twitter.com/DiegoTest3";
     	String email = "diegopagefreezer";

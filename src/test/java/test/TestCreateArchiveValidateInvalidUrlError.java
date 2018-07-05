@@ -36,7 +36,7 @@ public class TestCreateArchiveValidateInvalidUrlError {
      */
 
     @Test(priority=0)
-    public void test_Create_Archive_No_Capture(){
+    public void test_Create_Archive_Validate_Invalid_Url(){
     
     	String URL = "www.fakeaddress.com";
     	String email = "diegopagefreezer@gmail.com";

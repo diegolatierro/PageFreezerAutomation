@@ -1,71 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="356994" started-at="2018-07-05T16:10:42Z" finished-at="2018-07-05T16:16:39Z">
+  <suite name="Default suite" duration-ms="109690" started-at="2018-07-05T19:09:19Z" finished-at="2018-07-05T19:11:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="356994" started-at="2018-07-05T16:10:42Z" finished-at="2018-07-05T16:16:39Z">
-      <class name="test.TestCreateArchiveValidateNoEmailError">
-        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateArchiveValidateNoEmailError@ae45eb6]" name="test_Create_Archive_No_Capture" duration-ms="16362" started-at="2018-07-05T16:12:26Z" finished-at="2018-07-05T16:12:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Create_Archive_No_Capture -->
-      </class> <!-- test.TestCreateArchiveValidateNoEmailError -->
-      <class name="test.TestCreateArchiveValidateNoUrlError">
-        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateArchiveValidateNoUrlError@59f99ea]" name="test_Create_Archive_No_Capture" duration-ms="16657" started-at="2018-07-05T16:12:42Z" finished-at="2018-07-05T16:12:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Create_Archive_No_Capture -->
-      </class> <!-- test.TestCreateArchiveValidateNoUrlError -->
-      <class name="test.TestCreateArchiveValidateInvalidEmailError">
-        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateArchiveValidateInvalidEmailError@27efef64]" name="test_Create_Archive_No_Capture" duration-ms="16544" started-at="2018-07-05T16:12:59Z" finished-at="2018-07-05T16:13:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Create_Archive_No_Capture -->
-      </class> <!-- test.TestCreateArchiveValidateInvalidEmailError -->
-      <class name="test.TestCreateArchiveValidateInvalidUrlError">
-        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateArchiveValidateInvalidUrlError@6f7fd0e6]" name="test_Create_Archive_No_Capture" duration-ms="16635" started-at="2018-07-05T16:13:15Z" finished-at="2018-07-05T16:13:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Create_Archive_No_Capture -->
-      </class> <!-- test.TestCreateArchiveValidateInvalidUrlError -->
-      <class name="test.TestCreateAnArchiveNotCapture">
-        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateAnArchiveNotCapture@47c62251]" name="test_Create_Archive_No_Capture" duration-ms="89328" started-at="2018-07-05T16:13:32Z" finished-at="2018-07-05T16:15:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Create_Archive_No_Capture -->
-      </class> <!-- test.TestCreateAnArchiveNotCapture -->
-      <class name="test.TestCreateAnArchiveCapture">
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveCapture@3e6fa38a]" name="setup" is-config="true" duration-ms="11499" started-at="2018-07-05T16:10:42Z" finished-at="2018-07-05T16:10:53Z">
+    <test name="Default test" duration-ms="109690" started-at="2018-07-05T19:09:19Z" finished-at="2018-07-05T19:11:09Z">
+      <class name="test.TestCreateAnArchiveDelete">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveDelete@3ffc5af1]" name="setup" is-config="true" duration-ms="14451" started-at="2018-07-05T19:09:19Z" finished-at="2018-07-05T19:09:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveNotCapture@47c62251]" name="setup" is-config="true" duration-ms="9622" started-at="2018-07-05T16:10:53Z" finished-at="2018-07-05T16:11:03Z">
+        <test-method status="PASS" signature="test_Create_Archive_Delete()[pri:0, instance:test.TestCreateAnArchiveDelete@3ffc5af1]" name="test_Create_Archive_Delete" duration-ms="95221" started-at="2018-07-05T19:09:34Z" finished-at="2018-07-05T19:11:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateArchiveValidateInvalidEmailError@27efef64]" name="setup" is-config="true" duration-ms="12398" started-at="2018-07-05T16:11:03Z" finished-at="2018-07-05T16:11:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateArchiveValidateInvalidUrlError@6f7fd0e6]" name="setup" is-config="true" duration-ms="19426" started-at="2018-07-05T16:11:15Z" finished-at="2018-07-05T16:11:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateArchiveValidateNoEmailError@ae45eb6]" name="setup" is-config="true" duration-ms="18547" started-at="2018-07-05T16:11:35Z" finished-at="2018-07-05T16:11:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateArchiveValidateNoUrlError@59f99ea]" name="setup" is-config="true" duration-ms="32560" started-at="2018-07-05T16:11:53Z" finished-at="2018-07-05T16:12:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Create_Archive_No_Capture()[pri:0, instance:test.TestCreateAnArchiveCapture@3e6fa38a]" name="test_Create_Archive_No_Capture" duration-ms="97369" started-at="2018-07-05T16:15:01Z" finished-at="2018-07-05T16:16:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Create_Archive_No_Capture -->
-      </class> <!-- test.TestCreateAnArchiveCapture -->
+        </test-method> <!-- test_Create_Archive_Delete -->
+      </class> <!-- test.TestCreateAnArchiveDelete -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
