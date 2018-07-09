@@ -25,7 +25,7 @@ public class Gmail {
     @FindBy(css="#passwordNext")
     WebElement loginPassNextButton;
     
-    @FindBy(css="table+table>tbody>tr>td>a[href='?&th=1646047d9f0ad8e9&v=c']>span")
+    @FindBy(css="table+table>tbody>tr:nth-child(1)>td:nth-child(3)>a:nth-child(1)>span")
     WebElement firstEmail;
     
     @FindBy(css="#allow")

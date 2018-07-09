@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109690" started-at="2018-07-05T19:09:19Z" finished-at="2018-07-05T19:11:09Z">
+  <suite name="Default suite" duration-ms="107603" started-at="2018-07-09T18:03:59Z" finished-at="2018-07-09T18:05:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="109690" started-at="2018-07-05T19:09:19Z" finished-at="2018-07-05T19:11:09Z">
-      <class name="test.TestCreateAnArchiveDelete">
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveDelete@3ffc5af1]" name="setup" is-config="true" duration-ms="14451" started-at="2018-07-05T19:09:19Z" finished-at="2018-07-05T19:09:34Z">
+    <test name="Default test" duration-ms="107603" started-at="2018-07-09T18:03:59Z" finished-at="2018-07-09T18:05:47Z">
+      <class name="test.TestCreateAnArchiveCapture">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.TestCreateAnArchiveCapture@3ffc5af1]" name="setup" is-config="true" duration-ms="11965" started-at="2018-07-09T18:03:59Z" finished-at="2018-07-09T18:04:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Create_Archive_Delete()[pri:0, instance:test.TestCreateAnArchiveDelete@3ffc5af1]" name="test_Create_Archive_Delete" duration-ms="95221" started-at="2018-07-05T19:09:34Z" finished-at="2018-07-05T19:11:09Z">
+        <test-method status="PASS" signature="test_Create_Archive_Capture()[pri:0, instance:test.TestCreateAnArchiveCapture@3ffc5af1]" name="test_Create_Archive_Capture" duration-ms="95610" started-at="2018-07-09T18:04:11Z" finished-at="2018-07-09T18:05:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_Create_Archive_Delete -->
-      </class> <!-- test.TestCreateAnArchiveDelete -->
+        </test-method> <!-- test_Create_Archive_Capture -->
+      </class> <!-- test.TestCreateAnArchiveCapture -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
